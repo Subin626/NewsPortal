@@ -1,0 +1,54 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Make the body fill the viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  /* Navigation styles */
+  nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  nav a.active {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  /* Section styles */
