@@ -1,54 +1,64 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:flex-end;
+}
+
+.nav-links li {
+  padding: 10px 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  background-color: #555;
+  /* text-decoration: underline; */
   
-  body {
-    font-family: Arial, sans-serif;
-    height: 100vh; /* Make the body fill the viewport height */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 20px;
-  }
-  
-  header h1 {
-    font-size: 24px;
-  }
-  
-  /* Navigation styles */
-  nav {
-    background-color: #f2f2f2;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav li {
-    margin-right: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #333333;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  nav a.active {
-    background-color: #333333;
-    color: #ffffff;
-  }
-  
-  /* Section styles */
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content li a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
