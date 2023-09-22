@@ -24,9 +24,15 @@ if (isset($_POST['login'])) {
 <head>
 <style>
  .news-section {
-    display: flex;
-    gap: 20px;
-  }
+    /* display: flex;
+    gap: 20px; */
+    display: grid;
+    margin-top:20px ;
+    margin-left:20px ;
+    margin-right:20px ;
+    grid-template-columns: auto auto ;
+    gap: 50px 100px;  
+}
 
   .news-item {
     border: 1px solid #ccc;
@@ -65,23 +71,17 @@ if (isset($_POST['login'])) {
 </style>
   <title>News Portal</title>
   <link rel="stylesheet" href="./css/homePage.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
   <h1 style="text-align: center;">News Portal</h1>
   <nav>
 
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li class="dropdown">
-        <a href="#categories">Categories &#9662;</a>
-        <ul class="dropdown-content">
-          <li><a href="#category1">Category 1</a></li>
-          <li><a href="#category2">Category 2</a></li>
-          <li><a href="#category3">Category 3</a></li>
-          <!-- Add more categories as needed -->
-        </ul>
-      </li>
-      <li><a href="#preference">Preference</a></li>
+      <li><a href="http://localhost/newsportal/NewsPortal/homePage.php#">Home</a></li>
+      <li><a href="http://localhost/newsportal/NewsPortal/preference.php">Preference</a></li>
+      <li> <a class="btn btn-primary" href="http://localhost/newsportal/NewsPortal/loginPage.php" role="button">Admin login</a></li>
+
     </ul>
   </nav>
 
@@ -89,38 +89,9 @@ if (isset($_POST['login'])) {
 
   <div class="news-section">
 
-  
-  <div class="news-item">
-    <h2>Title 2</h2>
-    <p>Description 2</p>
-    <img src="http://localhost/newsportal/NewsPortal/test.webp" style="width: 50%;" alt="Image 2">
-    <button class="toggle-comment-form">Leave a Comment</button>
-    <form class="comment-form">
-      <label for="user-comment">Leave your comment:</label>
-      <textarea id="user-comment" name="user-comment" rows="4" placeholder="Enter your comment"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </div><div class="news-item">
-    <h2>Title 2</h2>
-    <p>Description 2</p>
-    <img src="http://localhost/newsportal/NewsPortal/test.webp" style="width: 50%;" alt="Image 2">
-    <button class="toggle-comment-form">Leave a Comment</button>
-    <form class="comment-form">
-      <label for="user-comment">Leave your comment:</label>
-      <textarea id="user-comment" name="user-comment" rows="4" placeholder="Enter your comment"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </div><div class="news-item">
-    <h2>Title 2</h2>
-    <p>Description 2</p>
-    <img src="http://localhost/newsportal/NewsPortal/test.webp" style="width: 50%;" alt="Image 2">
-    <button class="toggle-comment-form">Leave a Comment</button>
-    <form class="comment-form">
-      <label for="user-comment">Leave your comment:</label>
-      <textarea id="user-comment" name="user-comment" rows="4" placeholder="Enter your comment"></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+  <?php
+  include './backend/fetch_post.php'
+  ?>
 </div>
 
 <script>

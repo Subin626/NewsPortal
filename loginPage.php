@@ -6,7 +6,7 @@
 </head>
 <body>
   <div class="container">
-  <form class="login-form" action="homePage.php" method="POST">
+  <form class="login-form" action="./backend/check_admin.php" method="POST">
       <h2>News Portal login</h2>
       <input type="text" name="username" placeholder="Username" required>
       <input type="password" name="password" placeholder="Password" required>

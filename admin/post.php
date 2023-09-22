@@ -3,15 +3,15 @@ include './header.php'
 ?>
   <div class="post-form">
     <h2>Add a New Post</h2>
-    <form id="postForm">
+    <form id="postForm" action="../backend/add_post.php" method="post" enctype="multipart/form-data">
       <label for="postTitle">Title</label>
-      <input type="text" id="postTitle" required>
+      <input type="text" id="postTitle" name="post_title" >
 
       <label for="postContent">Content</label>
-      <textarea id="postContent" rows="5" required></textarea>
+      <textarea id="postContent" rows="5" name="post_content" ></textarea>
       <div class="form-field">
             <label for="category">Category:</label>
-            <select id="category" name="category" required>
+            <select id="category" name="category" >
                 <option value="">Select a category</option>
                 <?php
                   include '../backend/fetch_categories_for_sub_categories_page.php';
@@ -25,7 +25,7 @@ include './header.php'
         </div>
         <div class="form-field">
             <label for="sub_category">Sub Category:</label>
-            <select id="sub_category" name="sub_category" required>
+            <select id="sub_category" name="sub_category" >
                 <option value="">Select a sub category</option>
                 <?php
                   include '../backend/fetch_subcategories_for_post.php';
@@ -39,7 +39,7 @@ include './header.php'
         </div>
 
       <label for="postImage">Upload Photo</label>
-      <input type="file" id="postImage" accept="image/*">
+      <input type="file" id="post_image"  name="post_image">
 
       
       <button type="submit">Add Post</button>
@@ -47,7 +47,7 @@ include './header.php'
 
     <div class="post-image-preview" id="imagePreview"></div>
   </div>
-
+<!-- 
   <script>
     const postForm = document.getElementById('postForm');
     const postImage = document.getElementById('postImage');
@@ -84,7 +84,7 @@ include './header.php'
         reader.readAsDataURL(file);
       }
     });
-  </script>
+  </script> -->
 <?php
 include './footer.php'
 ?>
