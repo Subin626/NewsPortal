@@ -23,51 +23,19 @@ if (isset($_POST['login'])) {
 <html>
 <head>
 <style>
- .news-section {
-    /* display: flex;
-    gap: 20px; */
-    display: grid;
-    margin-top:20px ;
-    margin-left:20px ;
-    margin-right:20px ;
-    grid-template-columns: auto auto ;
-    gap: 50px 100px;  
+.news-section{
+  margin: 20px;
+  padding: 20px;
+ /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+}
+.news-section div{
+
+  background-color: purple;
+  padding: 10px;
 }
 
-  .news-item {
-    border: 1px solid #ccc;
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1;
-  }
-
-  .comment-form {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-  }
-
-  .comment-form label {
-    display: block;
-    font-weight: bold;
-  }
-
-  .comment-form textarea {
-    width: 100%;
-    padding: 5px;
-    margin-top: 5px;
-  }
-
-  .comment-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
 </style>
   <title>News Portal</title>
   <link rel="stylesheet" href="./css/homePage.css">
@@ -89,10 +57,45 @@ if (isset($_POST['login'])) {
 
   <div class="news-section">
 
-  <?php
-  include './backend/fetch_post.php'
-  ?>
-</div>
+  <div>
+    Title:<span>1.
+      hejdsflj
+    </span>
+    <br>
+    description:<span>
+      hejdsflj
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam optio consequatur in impedit excepturi perspiciatis fugiat recusandae. Perspiciatis, exercitationem inventore ex suscipit animi facilis aliquam quae, delectus amet sapiente obcaecati.
+    </span>
+    <br>
+    photo<span>
+      hejdsflj
+    </span>
+    <br>
+    Comment<span>
+      hejdsflj
+    </span>
+  
+  </div>
+  <div>
+    Title:<span>1.
+      hejdsflj
+    </span>
+    <br>
+    description:<span>
+      hejdsflj
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur hic officia voluptatum harum illo, fuga cupiditate. Non hic sapiente aliquid et necessitatibus tempore perferendis reiciendis dicta, veniam libero quidem delectus.
+    </span>
+    <br>
+    photo<span>
+      hejdsflj
+    </span>
+    <br>
+    Comment<span>
+      hejdsflj
+    </span>
+  
+  </div>
+  </div>
 
 <script>
   const toggleButton = document.querySelector('.toggle-comment-form');
